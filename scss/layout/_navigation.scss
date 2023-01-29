@@ -1,0 +1,33 @@
+
+.navbar{
+  padding: 20px 0;
+  .navbar-toggler{
+    border: none;
+    >.bx{
+      color: $white-color;
+      font-size: $logo-font;
+    }
+  }
+  .navbar-brand{
+    .logo{
+      font-size: $logo-font;
+      color:  $white-color;
+      font-weight: $font-bold;
+    }
+  }
+  .navbar-nav{
+    @include for-tablet{
+      background-color: rgba(255, 255, 255,0.3);
+      text-align: center;
+    }
+    .nav-link{
+      color: $white-color;
+      font-size: $menu-font;
+      margin: 0 15px;
+
+    }
+    >.active{
+      color: $active-color;
+    }
+  }
+}
