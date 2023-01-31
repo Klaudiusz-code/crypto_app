@@ -1,42 +1,49 @@
-.hero{
-padding: 60px 0;
-    .info{
-      padding: 25px 0;
-      .info-title,
-      .info-subtitle,
-      .desc{
-        margin: 1rem 0;
-        letter-spacing: 2px;
-      }
-      .info-title{
-        color: $white-color;
-        font-size: $title-font;
-        font-weight: $font-bold;
-      }
-      .info-subtitle{
-        color: $active-color;
-        font-size: $title-font;
-        font-weight: $font-bold;
-      }
-    }
-    .desc{
-      line-height: 28px;
-      color: $white-color;
-      font-weight: $font-thin;
-      font-family: $main-fonts;
-    }
-    .action{
-      margin: 2rem 0;
-        .btn{
-         background: $btn-color;
-          color: $white-color;
-          font-weight: $font-bold;
-          padding: 15px 33px;
-          transition: background-color 0.1s ease-in-out;
+.hero {
+  padding: 60px 0;
 
-            &:hover {
-            background-color: $active-color;
-            }
+  & .info {
+    padding: 25px 0;
+
+    & .info-title,
+    & .info-subtitle,
+    & .desc {
+      margin: 1rem 0;
+      letter-spacing: 2px;
+    }
+
+    & .info-title {
+      color: $white-color;
+      font-size: $title-font;
+      font-weight: $font-bold;
+    }
+
+    & .info-subtitle {
+      color: $active-color;
+      font-size: $title-font;
+      font-weight: $font-bold;
+    }
+  }
+
+  & .desc {
+    line-height: 28px;
+    color: $white-color;
+    font-weight: $font-thin;
+    font-family: $main-fonts;
+  }
+
+  & .action {
+    margin: 2rem 0;
+
+    & .btn {
+      background: $btn-color;
+      color: $white-color;
+      font-weight: $font-bold;
+      padding: 15px 33px;
+      transition: background-color 0.1s ease-in-out;
+
+      &:hover {
+        background-color: $active-color;
       }
     }
   }
+}

@@ -1,32 +1,38 @@
+.bg-container {
+  background: url('/img/background.jpg') center/cover no-repeat;
+  height: auto;
+}
 
-.navbar{
+.navbar {
   padding: 20px 0;
-  .navbar-toggler{
+
+  & .navbar-toggler {
     border: none;
-    >.bx{
+    > .bx {
       color: $white-color;
       font-size: $logo-font;
     }
   }
-  .navbar-brand{
-    .logo{
-      font-size: $logo-font;
-      color:  $white-color;
-      font-weight: $font-bold;
-    }
+
+  & .navbar-brand .logo {
+    font-size: $logo-font;
+    color: $white-color;
+    font-weight: $font-bold;
   }
-  .navbar-nav{
-    @include for-tablet{
-      background-color: rgba(255, 255, 255,0.3);
+
+  & .navbar-nav {
+    @include for-tablet {
+      background-color: rgba(255, 255, 255, 0.3);
       text-align: center;
     }
-    .nav-link{
+
+    & .nav-link {
       color: $white-color;
       font-size: $menu-font;
       margin: 0 15px;
-
     }
-    >.active{
+
+    & > .active {
       color: $active-color;
     }
   }
