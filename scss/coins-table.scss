@@ -1,0 +1,48 @@
+@import 'abstracts/variables';
+
+table {
+    width: 100%;
+    text-align: center;
+    display: table;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        background-color: $active-color;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $dark-color;
+        border-radius: 4px;
+        visibility: hidden;
+
+        &:hover {
+            visibility: visible;
+        }
+    }
+
+    tbody {
+        tr {
+            background-color: $white-color;
+
+            td {
+                & img {
+                    width: 36px;
+                    height: 36px;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        th,
+        td {
+            padding: 16px;
+            border-collapse: collapse;
+        }
+    }
+
+    thead {
+        background-color: $white-color;
+        color: $dark-color;
+    }
+}

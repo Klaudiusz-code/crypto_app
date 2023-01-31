@@ -1,0 +1,46 @@
+/* Colors */
+/* Font Sizes */
+/* Font Weights */
+/* Font Family */
+table {
+  width: 100%;
+  text-align: center;
+  display: table;
+}
+
+table::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #F8A970;
+}
+
+table::-webkit-scrollbar-thumb {
+  background-color: #262626;
+  border-radius: 4px;
+  visibility: hidden;
+}
+
+table::-webkit-scrollbar-thumb:hover {
+  visibility: visible;
+}
+
+table tbody tr {
+  background-color: #fff;
+}
+
+table tbody tr td img {
+  width: 36px;
+  height: 36px;
+  vertical-align: middle;
+}
+
+table tbody th,
+table tbody td {
+  padding: 16px;
+  border-collapse: collapse;
+}
+
+table thead {
+  background-color: #fff;
+  color: #262626;
+}

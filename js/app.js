@@ -1,41 +1,12 @@
+// Pobieramy funkcje API
+import { getCoins } from './coin-geko/index.js';
 
-    export const resultCurrency = (currency) => {
-        for(const res of currency){
+// Definiujemy niestandardowy element
+import './coins-table.js';
 
-            const tb = document.querySelector('tbody');
-            tb.classList.add('tbody')
+// Pobieramy kursy kryptowalut
+const coinsData = await getCoins();
 
-            const tr = document.createElement('tr')
-            tr.classList.add('tr')
-
-            const tdName = document.createElement('td')
-            tdName.classList.add('td')
-
-            const nameImg = document.createElement('img')
-            nameImg.classList.add('img')
-            nameImg.src =`${res.img}`
-
-            const tdPrice = document.createElement('td')
-            tdPrice.classList.add('td')
-            tdPrice.innerText = `${res.price}`
-
-            const tdVolume = document.createElement('td')
-            tdVolume.classList.add('td')
-            tdVolume.innerText = `${res.volume}`
-
-            const tdChange = document.createElement('td')
-            tdChange.classList.add('td')
-            tdChange.innerText = `${res.change}`
-
-
-            tr.appendChild(tdName)
-            tdName.appendChild(nameImg)
-            tr.appendChild(tdPrice)
-            tr.appendChild(tdVolume)
-            tr.appendChild(tdChange)
-            tb.appendChild(tr)
-        }
-    }
-
-
-
+// Wyszukujemy nasz niestandardowy element na stronie i uzupełniamy kursami
+const coinsTable = document.querySelector("coins-table");
+coinsTable.fill(coinsData);
