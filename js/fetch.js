@@ -10,9 +10,10 @@ let currency;
     currency = data.map(val => {
         return {
             img: val.image,
-            price: val.current_price,
-            volume: val.total_volume,
-            change: val.price_change_24h,
+            price: val.current_price.toFixed(2),
+            max24: val.high_24h.toFixed(2).toLocaleString("pl-PL", {maximumFractionDigits: 2}),
+            min24: val.low_24h.toFixed(2).toLocaleString("pl-PL", {maximumFractionDigits: 2}),
+            change: val.price_change_24h.toFixed(3),
         }
     });
     resultCurrency(currency)

@@ -1,5 +1,4 @@
-
-    export const resultCurrency = (currency) => {
+export const resultCurrency = (currency) => {
         for(const res of currency){
 
             const tb = document.querySelector('tbody');
@@ -19,19 +18,35 @@
             tdPrice.classList.add('td')
             tdPrice.innerText = `${res.price}`
 
-            const tdVolume = document.createElement('td')
-            tdVolume.classList.add('td')
-            tdVolume.innerText = `${res.volume}`
+            const tdMax = document.createElement('td')
+            tdMax.classList.add('td')
+            tdMax.innerText = `${res.max24}`
+
+            const tdMin = document.createElement('td')
+            tdMin.classList.add('td')
+            tdMin.innerText = `${res.min24}`
 
             const tdChange = document.createElement('td')
-            tdChange.classList.add('td')
-            tdChange.innerText = `${res.change}`
-
+            if (res.change > 0) {
+                tdChange.innerHTML = `
+                 <i class='bx bx-chevron-up' ></i>
+                 ${res.change} %`;
+                 tdChange.classList.add('positive');
+            } else if (res.change < 0) {
+                tdChange.innerHTML = `
+                <i class='bx bx-chevron-down' ></i>
+                ${res.change} %`;
+                tdChange.classList.add('negative');
+            }
+            else {
+                tdChange.innerHTML = `${res.change} %`
+            }
 
             tr.appendChild(tdName)
             tdName.appendChild(nameImg)
             tr.appendChild(tdPrice)
-            tr.appendChild(tdVolume)
+            tr.appendChild(tdMax)
+            tr.appendChild(tdMin)
             tr.appendChild(tdChange)
             tb.appendChild(tr)
         }
