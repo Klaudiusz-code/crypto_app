@@ -14,7 +14,13 @@ table{
   width: 100%;
 }
 th,td{
+
   padding: 8px;
+
+  >.bx{
+    font-size: 16px;
+    margin-right: 5px;
+  }
 }
 img {
   max-width: 100%;
@@ -22,4 +28,10 @@ img {
   border: 0;
   margin: 0;
   padding: 0;
+}
+.positive{
+  color: $positive-color;
+}
+.negative{
+  color: $negative-color;
 }
