@@ -1,11 +1,12 @@
 import { resultCurrency } from "./app.js";
 
-const API = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false';
+const API = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=30&page=1&sparkline=false';
 
 let currency;
+let page;
 
 (async () => {
-    const res = await fetch(API);
+    const res = await fetch(API + page);
     const data = await res.json();
     currency = data.map(val => {
         return {
@@ -16,5 +17,5 @@ let currency;
             change: val.price_change_24h.toFixed(3),
         }
     });
-    resultCurrency(currency)
+    resultCurrency(currency,page)
 })();
