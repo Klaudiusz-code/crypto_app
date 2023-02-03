@@ -27,12 +27,25 @@ th, td {
   padding: 8px;
 }
 
+th > .bx, td > .bx {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
 img {
   max-width: 100%;
   height: auto;
   border: 0;
   margin: 0;
   padding: 0;
+}
+
+.positive {
+  color: #90ec90;
+}
+
+.negative {
+  color: #fb0c0c;
 }
 
 .bg-container {
@@ -49,13 +62,13 @@ img {
 }
 
 .navbar .navbar-toggler > .bx {
-  color: #fff;
+  color: #ffffff;
   font-size: 33px;
 }
 
 .navbar .navbar-brand .logo {
   font-size: 33px;
-  color: #fff;
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -67,7 +80,7 @@ img {
 }
 
 .navbar .navbar-nav .nav-link {
-  color: #fff;
+  color: #ffffff;
   font-size: 16px;
   margin: 0 15px;
 }
@@ -92,7 +105,7 @@ img {
 }
 
 .hero .info .info-title {
-  color: #fff;
+  color: #ffffff;
   font-size: 50px;
   font-weight: 600;
 }
@@ -105,7 +118,7 @@ img {
 
 .hero .desc {
   line-height: 28px;
-  color: #fff;
+  color: #ffffff;
   font-weight: 300;
   font-family: "Poppins", sans-serif;
 }
@@ -116,7 +129,7 @@ img {
 
 .hero .action .btn {
   background: #E49334;
-  color: #fff;
+  color: #ffffff;
   font-weight: 600;
   padding: 15px 33px;
   transition: background-color 0.1s ease-in-out;
@@ -134,6 +147,9 @@ img {
   width: 100%;
   margin: .8rem auto;
   overflow: auto;
+  -webkit-box-shadow: 6px -5px 39px -20px #42445a;
+  -moz-box-shadow: 6px -5px 39px -20px #42445a;
+  box-shadow: 6px -5px 39px -20px #42445a;
 }
 
 .main .table__content table {
@@ -159,7 +175,14 @@ img {
 }
 
 .main .table__content table tbody tr {
-  background-color: #fff;
+  padding: 0 40px;
+  background-color: #ffffff;
+  border: 1px solid #f6f5f5;
+  text-align: center;
+}
+
+.main .table__content table tbody tr td {
+  border: 1px solid #f6f5f5;
 }
 
 .main .table__content table tbody tr td img {
@@ -175,6 +198,37 @@ img {
 }
 
 .main .table__content table thead {
-  background-color: #fff;
-  color: #262626;
+  background-color: #ffffff;
+  color: #d8d6d6;
+  padding: 20px;
+}
+
+.main .pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .pagination__menu {
+  margin: 15px;
+}
+
+.main .pagination__menu-btn {
+  margin-right: 20px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #ffffff;
+  color: #878585;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.1s ease-in-out;
+  -webkit-box-shadow: 4px 9px 38px -17px #42445a;
+  -moz-box-shadow: 4px 9px 38px -17px #42445a;
+  box-shadow: 4px 9px 38px -17px #42445a;
+}
+
+.main .pagination__menu-btn:hover {
+  background-color: #F8A970;
+  color: #ffffff;
 }
