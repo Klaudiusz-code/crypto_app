@@ -232,3 +232,18 @@ img {
   background-color: #F8A970;
   color: #ffffff;
 }
+
+.footer {
+  background-color: #64878d;
+  margin-top: 4rem;
+}
+
+.footer__title {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer__title-text {
+  font-size: 16px;
+  color: #ffffff;
+}
