@@ -1,0 +1,14 @@
+.footer{
+  background-color: #64878d;
+  margin-top: 4rem;
+
+  &__title{
+    text-align: center;
+    padding: 30px 0;
+
+    &-text{
+      font-size: $menu-font;
+      color: $white-color;
+    }
+  }
+}
